@@ -1,0 +1,5 @@
+{
+  "name": "QR POS",
+  "description": "Comprehensive administration dashboard for the QR POS system, featuring merchant control, detailed reporting, and audit logs.",
+  "requestFramePermissions": []
+}

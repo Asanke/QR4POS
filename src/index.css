@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+:root {
+  --chart-grid: #f1f5f9;
+  --chart-text: #94a3b8;
+}
+
+.dark {
+  --chart-grid: #1e293b;
+  --chart-text: #64748b;
+}
+
+@theme {
+  --color-brand-blue: #0052D4;
+  --color-brand-green: #56ab2f;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-50 text-slate-900 transition-colors duration-300;
+  }
+  
+  .dark body {
+    @apply bg-slate-950 text-slate-100;
+  }
+}
+
+.sidebar-item-active {
+  @apply bg-brand-blue text-white shadow-md;
+}
+
+.btn-primary {
+  @apply bg-brand-blue text-white font-bold px-6 py-2 rounded-full shadow-sm hover:opacity-90 transition-all uppercase text-sm tracking-wider flex items-center justify-center gap-2;
+}
+
+.table-header {
+  @apply bg-brand-blue text-white font-bold text-sm;
+}
+
+.gradient-bg {
+  @apply bg-linear-to-r from-brand-blue to-brand-green;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-linear-to-r from-brand-blue to-brand-green;
+}
+
+/* Dark mode overrides */
+.dark .bg-white {
+  @apply bg-slate-900 border-slate-800;
+}
+
+.dark aside.bg-white {
+  @apply bg-slate-900 border-slate-800;
+}
+
+.dark header.bg-white {
+  @apply bg-slate-900 border-slate-800;
+}
+
+.dark .text-slate-900 {
+  @apply text-slate-100;
+}
+
+.dark .text-slate-800 {
+  @apply text-slate-200;
+}
+
+.dark .text-slate-700 {
+  @apply text-slate-300;
+}
+
+.dark .text-slate-600 {
+  @apply text-slate-400;
+}
+
+.dark .text-slate-500 {
+  @apply text-slate-500;
+}
+
+.dark .text-slate-400 {
+  @apply text-slate-500;
+}
+
+.dark .bg-slate-50 {
+  @apply bg-slate-800/50;
+}
+
+.dark .bg-slate-50\/50 {
+  @apply bg-slate-800/30;
+}
+
+.dark .border-slate-100, .dark .border-slate-200 {
+  @apply border-slate-800;
+}
+
+.dark .shadow-sm {
+  @apply shadow-none;
+}
+
+.dark input, .dark select, .dark textarea {
+  @apply bg-slate-800 text-slate-200 border-slate-700 placeholder:text-slate-500;
+}
+
+.dark .hover\:bg-slate-50:hover {
+  @apply bg-slate-800/40;
+}
+
+.dark .hover\:bg-slate-100:hover {
+  @apply bg-slate-800/60;
+}
